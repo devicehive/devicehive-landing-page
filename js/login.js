@@ -5,7 +5,7 @@ $(document).ready(function() {
         $('#signUpModal').modal('show');
     }
 
-    $('#menuPlayground').bind("click", function(e){
+    /*$('#menuPlayground').bind("click", function(e){
         $('.menuOverlay').hide();
         $('.mainContent').toggleClass('hide');
         $('#loginModal').toggleClass('hide');
@@ -19,6 +19,6 @@ $(document).ready(function() {
     $('#signupBtn').bind("click", function(e){
         $('.mainContent').toggleClass('hide');
         $('#loginModal').toggleClass('hide');
-    });
+    });*/
 
 });
