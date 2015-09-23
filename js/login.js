@@ -4,6 +4,10 @@ $(document).ready(function() {
         var date = new Date;
         $('#signUpModal').modal('show');
     }
+    $('#menuContactUs').bind("click", function(e){
+        $('.menuOverlay').hide();
+        $('#contactModal').modal('show');
+     });
 
     /*$('#menuPlayground').bind("click", function(e){
         $('.menuOverlay').hide();

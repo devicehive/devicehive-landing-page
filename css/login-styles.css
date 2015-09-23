@@ -122,15 +122,8 @@ span[class*='i-f-'] i[class*='fa-'] {
 .button-container {
     margin-top: 20px;
 }
-.modal-input {
-    border: 1px solid #d1d1d1;
-    color: #333;
-    width: 100%;
-    min-width: 210px;
-    margin-bottom: 20px;
-}
 
-.sign-up-modal,
+.modal,
 .login-modal {
     color: #666;
     text-align: center;
@@ -139,27 +132,42 @@ span[class*='i-f-'] i[class*='fa-'] {
     min-width: 210px;
 }
 
-.sign-up-modal h2,
+.modal h2,
 .login-modal h2{
     margin: 0;
     color: #333;
 }
 
-.login-modal input,
-.sign-modal input {
+.modal-input,
+.modal textarea,
+.modal input,
+.login-modal input {
+    border: 1px solid #d1d1d1;
+    color: #333;
     width: 100%;
     min-width: 210px;
+    margin-bottom: 20px;
 }
 
+.contact-modal,
 .sign-up-modal {
     width: 750px;
-    height: 554px;
-    background: transparent url("../img/modal-bg.png") left top no-repeat;
     background-size: contain;
     padding: 109px 135px 95px;
 }
 
-.sign-up-modal .modal-content {
+.sign-up-modal {
+    height: 554px;
+    background: transparent url("../img/modal-bg.png") left top no-repeat;
+}
+
+.contact-modal,
+.sign-up-modal {
+    height: 750px;
+    background: transparent url("../img/modal-bg-750.png") left top no-repeat;
+}
+
+.modal .modal-content {
     box-sizing: border-box;
     position: relative;
     width: 100%;
@@ -168,13 +176,24 @@ span[class*='i-f-'] i[class*='fa-'] {
     text-align: center;
 }
 
-.sign-up-modal h2 {
+.modal h2 {
     font: 400 40px/40px 'Open Sans', Arial, Helvetica, sans-serif;
+    margin: 0 0 20px;
 }
 
-.sign-up-modal p {
-    margin: 20px 0;
+.modal p {
+    margin: 0 0 20px;
     font: 400 17px/24px 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+.modal textarea {
+    min-height: 100px;
+    max-height: 400px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font: 400 17px/24px 'Open Sans', Arial, Helvetica, sans-serif;
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
 .login-modal {
@@ -274,8 +293,13 @@ span[class*='i-f-'] i[class*='fa-'] {
         background: transparent url("../img/modal-bg-mobile.png") center center no-repeat;
         padding: 100px 24px 95px;
     }
+    .modal.contact-modal {
+         width: 100%;
+         background: transparent url("../img/modal-bg-mobile-750.png") center center no-repeat;
+         padding: 100px 24px 95px;
+    }
 
-    .sign-up-modal .modal-content {
+    .modal .modal-content {
         padding: 35px 10px 20px;
     }
 
@@ -283,7 +307,7 @@ span[class*='i-f-'] i[class*='fa-'] {
         margin-bottom: 0;
     }
 
-    .sign-up-modal,
+    .modal,
     .login-modal {
         font: 400 16px/24px 'Open Sans', Arial, Helvetica, sans-serif;
     }
@@ -306,7 +330,7 @@ span[class*='i-f-'] i[class*='fa-'] {
 }
 
 @media screen and (max-width: 480px) {
-    .sign-up-modal .modal-content {
+    .modal .modal-content {
         padding: 35px 0 20px;
     }
 

@@ -36,7 +36,7 @@
 					<li><a href="https://devicehive.readme.io/docs/iot-toolkit-overview" target="_blank">Samples</a></li>
 					<li><a href="http://playground.devicehive.com"  target="_blank" id="menuPlayground">Playground</a></li>
 					<li><a href="https://devicehive.readme.io/blog" target="_blank">Blog</a></li>
-					<li><a href="#">Contact Us</a></li>
+					<li><a href="#" id="menuContactUs">Contact Us</a></li>
 <!--
 					<li><a href="#">FAQ</a></li>
 -->
@@ -277,7 +277,21 @@
             <h2>Keep in touch</h2>
             <p>Sign up for our newsletter for info on new products, exlusive offers & awesome project ideas.</p>
             <input class="modal-input" type="text" name="email" placeholder="Your Email">
-            <a href="#" class="btn03 sign-up-btn">Sign Up</a>
+            <a href="#" class="btn03 sign-up-btn" id="keepInTouchBtn">Sign Up</a>
+        </div>
+    </div>
+
+    <div id="contactModal" class="modal fade contact-modal">
+        <div class="modal-content">
+            <a class="close close-modal-button" data-dismiss="modal"><span class="i-f-hex"><i class="i-f-delete"></i></span></a>
+            <form action="mailto:info@devicehive.com" name="contactForm" enctype="text/plain">
+                <h2>Contact us</h2>
+                <input class="modal-input" type="text" name="user_name" placeholder="Name">
+                <input class="modal-input" type="text" name="user_company" placeholder="Company">
+                <input class="modal-input" type="text" name="email" placeholder="Email">
+                <textarea class="modal-textarea" name="user_message"></textarea>
+                <a href="#" class="btn03 sign-up-btn" id="contactBtn">Send</a>
+            </form>
         </div>
     </div>
 
