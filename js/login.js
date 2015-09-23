@@ -9,6 +9,10 @@ $(document).ready(function() {
         $('#contactModal').modal('show');
      });
 
+    $('#askHow').bind("click", function(e){
+        $('.menuOverlay').hide();
+        $('#contactModal').modal('show');
+    });
     /*$('#menuPlayground').bind("click", function(e){
         $('.menuOverlay').hide();
         $('.mainContent').toggleClass('hide');
