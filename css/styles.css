@@ -352,7 +352,7 @@ input[type=password]:-ms-input-placeholder {
 	/*background: url(../img/fullBg04.jpg) no-repeat 50% 0; hot fix*/
 	/*min-height: 1456px; hot fix*/
     background: url(../img/fullBg06.jpg) no-repeat 50% 0;
-    min-height: 820px;
+    min-height: 582px;
 	text-align: center;
 }
 .technology .container {
