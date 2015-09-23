@@ -161,8 +161,7 @@ span[class*='i-f-'] i[class*='fa-'] {
     background: transparent url("../img/modal-bg.png") left top no-repeat;
 }
 
-.contact-modal,
-.sign-up-modal {
+.contact-modal {
     height: 750px;
     background: transparent url("../img/modal-bg-750.png") left top no-repeat;
 }
