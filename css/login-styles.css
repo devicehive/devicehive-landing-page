@@ -236,7 +236,7 @@ span[class*='i-f-'] i[class*='fa-'] {
 }
 
 .modal textarea {
-    min-height: 100px;
+    min-height: 90px;
     max-height: 400px;
     overflow-x: hidden;
     overflow-y: auto;
