@@ -37,4 +37,26 @@ $(function(){
 		}
 	});
 
+	window.email_subscribe = function(field, popup){
+		var email = $(field).val();
+
+		if (!email)
+		 return false;
+
+		console.log('EMAIL', email);
+
+		$.post('/subscribe/'+email, null, function (data) {
+			if (popup) {
+				$(popup).modal('toggle');
+			}
+			$(field).val('');
+			alert('Subscribed! We\'ll keep you in touch.');
+		}).fail(function(error) {
+			console.log(error);
+			alert('Oops, something went wrong!');
+		});
+
+		return true;
+	};
+
 });

@@ -219,8 +219,8 @@
 				<div class="cnt02">
 					<h3>Stay Tuned</h3>
 					<form action="//devicehive.us6.list-manage.com/subscribe/post?u=f61c753b4c1f02eb439b42f4f&amp;id=9c9f14f529" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-						<input type="text" placeholder="Your Email*" />
-                        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn04">
+						<input type="text" id="sub_email" placeholder="Your Email*" />
+                        <input type="button" onclick="email_subscribe('#sub_email')" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn04">
 					</form>
 					<p class="info">Sign up to receive The DeviceHub News Digest</p>
 				</div>
@@ -277,8 +277,8 @@
                 <a class="close close-modal-button" data-dismiss="modal"><span class="i-f-hex"><i class="i-f-delete"></i></span></a>
                 <h2>Keep in touch</h2>
                 <p>Sign up for our newsletter for info on new products, exlusive offers & awesome project ideas.</p>
-                <input class="modal-input" type="text" name="email" placeholder="Your Email">
-                <a href="#" class="btn03 sign-up-btn" id="keepInTouchBtn">Sign Up</a>
+                <input class="modal-input" id="sub_email_popup" type="text" name="email" placeholder="Your Email">
+                <a href="#" onclick="email_subscribe('#sub_email_popup', '#signUpModal')" class="btn03 sign-up-btn" id="keepInTouchBtn">Sign Up</a>
             </form>
         </div>
     </div>
