@@ -218,9 +218,9 @@
 				</div>
 				<div class="cnt02">
 					<h3>Stay Tuned</h3>
-					<form action="#">
+					<form action="//devicehive.us6.list-manage.com/subscribe/post?u=f61c753b4c1f02eb439b42f4f&amp;id=9c9f14f529" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 						<input type="text" placeholder="Your Email*" />
-						<input class="btn04" type="submit" value="Subscribe" />
+                        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn04">
 					</form>
 					<p class="info">Sign up to receive The DeviceHub News Dugest</p>
 				</div>
@@ -273,18 +273,21 @@
 
     <div id="signUpModal" class="modal fade sign-up-modal">
         <div class="modal-content">
-            <a class="close close-modal-button" data-dismiss="modal"><span class="i-f-hex"><i class="i-f-delete"></i></span></a>
-            <h2>Keep in touch</h2>
-            <p>Sign up for our newsletter for info on new products, exlusive offers & awesome project ideas.</p>
-            <input class="modal-input" type="text" name="email" placeholder="Your Email">
-            <a href="#" class="btn03 sign-up-btn" id="keepInTouchBtn">Sign Up</a>
+            <form>
+                <a class="close close-modal-button" data-dismiss="modal"><span class="i-f-hex"><i class="i-f-delete"></i></span></a>
+                <h2>Keep in touch</h2>
+                <p>Sign up for our newsletter for info on new products, exlusive offers & awesome project ideas.</p>
+                <input class="modal-input" type="text" name="email" placeholder="Your Email">
+                <a href="#" class="btn03 sign-up-btn" id="keepInTouchBtn">Sign Up</a>
+            </form>
         </div>
     </div>
 
     <div id="contactModal" class="modal fade contact-modal">
+        <div class="dec top"></div><div class="dec top"></div>
         <div class="modal-content">
             <a class="close close-modal-button" data-dismiss="modal"><span class="i-f-hex"><i class="i-f-delete"></i></span></a>
-            <form action="mailto:info@devicehive.com" name="contactForm" enctype="text/plain">
+            <form action="" name="contactForm" enctype="text/plain">
                 <h2>Contact us</h2>
                 <input class="modal-input" type="text" name="user_name" placeholder="Name">
                 <input class="modal-input" type="text" name="user_company" placeholder="Company">
@@ -297,12 +300,13 @@
 
     </body>
 
-	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="js/cookie-js.js"></script>
     <script type="text/javascript" src="js/bootstrap-modal.js"></script>
 
 	<script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/login.js"></script>
+
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -313,16 +317,5 @@
         ga('send', 'pageview');
 
     </script>
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-36033368-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
 
 </html>

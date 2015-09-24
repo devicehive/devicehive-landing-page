@@ -64,6 +64,51 @@
     top: 10%;
 }
 
+.modal .btn01,
+.modal .btn02,
+.modal .btn03,
+.modal .btn04,
+.modal input[type=text],
+.modal input[type=password],
+.modal input[type=email],
+.modal input[type=submit],
+.modal textarea {
+    display: inline-block;
+    border-radius:24px;
+    font: 20px/50px 'Open Sans', Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    padding: 0 15px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.modal .modal-content input {
+    font-style: italic;
+}
+
+.modal input::-webkit-input-placeholder {
+    color: #333;
+    line-height: 50px;
+    height: 50px;
+}
+.modal input::-moz-placeholder {
+    color: #333;
+    line-height: 50px;
+    height: 50px;
+}
+
+.modal input:-moz-placeholder {
+    color: #333;
+    line-height: 50px;
+    height: 50px;
+}
+
+.modal input:-ms-input-placeholder {
+    color: #333;
+    line-height: 50px;
+    height: 50px;
+}
+
 .close-modal-button {
     width: 48px;
     height: 56px;
@@ -128,7 +173,7 @@ span[class*='i-f-'] i[class*='fa-'] {
     color: #666;
     text-align: center;
     margin: 0;
-    font: 400 20px/30px 'Open Sans', Arial, Helvetica, sans-serif;
+    font: 400 17px/24px 'Open Sans', Arial, Helvetica, sans-serif;
     min-width: 210px;
 }
 
@@ -151,30 +196,32 @@ span[class*='i-f-'] i[class*='fa-'] {
 
 .contact-modal,
 .sign-up-modal {
-    width: 750px;
-    background-size: contain;
-    padding: 109px 135px 95px;
+    width: 654px;
+    background-size: auto auto;
+    padding: 72px 75px 64px 99px;
+    box-sizing: border-box;
 }
 
-.sign-up-modal {
-    height: 554px;
-    background: transparent url("../img/modal-bg.png") left top no-repeat;
-}
-
+.sign-up-modal,
 .contact-modal {
-    height: 750px;
-    background: transparent url("../img/modal-bg-750.png") left top no-repeat;
+    background-image:  url("../img/modal-bg-top.png"), url("../img/modal-bg-bottom.png");
+    background-position: top left, bottom right;
+    background-repeat: no-repeat, no-repeat;
 }
 
 .modal .modal-content {
     box-sizing: border-box;
     position: relative;
     width: 100%;
-    height: 100%;
-    padding: 35px 20px 20px;
+    padding: 35px 0 20px;
     text-align: center;
+    background: #fff;
+    background-clip: content-box;
 }
 
+.modal .modal-content form {
+    padding: 0 20px;
+}
 .modal h2 {
     font: 400 40px/40px 'Open Sans', Arial, Helvetica, sans-serif;
     margin: 0 0 20px;
@@ -282,33 +329,18 @@ span[class*='i-f-'] i[class*='fa-'] {
     }
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 570px) {
     .modal.fade.in {
         top: 0;
-    }
-
-    .modal.sign-up-modal {
-        width: 100%;
-        background: transparent url("../img/modal-bg-mobile.png") center center no-repeat;
-        padding: 100px 24px 95px;
-    }
-    .modal.contact-modal {
-         width: 100%;
-         background: transparent url("../img/modal-bg-mobile-750.png") center center no-repeat;
-         padding: 100px 24px 95px;
-    }
-
-    .modal .modal-content {
-        padding: 35px 10px 20px;
-    }
-
-    .modal p {
-        margin-bottom: 0;
     }
 
     .modal,
     .login-modal {
         font: 400 16px/24px 'Open Sans', Arial, Helvetica, sans-serif;
+    }
+
+    .close-modal-button {
+        right: 0;
     }
 
     .login-social li {
@@ -329,8 +361,21 @@ span[class*='i-f-'] i[class*='fa-'] {
 }
 
 @media screen and (max-width: 480px) {
+
+    .modal.sign-up-modal,
+    .modal.contact-modal {
+        width: 100%;
+        padding: 80px 0;
+        background-image:  url("../img/modal-bg-top.png"), url("../img/modal-bg-bottom.png");
+        background-position: right top,left  bottom;
+        background-repeat: no-repeat, no-repeat;
+    }
+
+    .modal .modal-content {
+        padding: 35px 10px 20px;
+    }
+
     .modal .modal-content {
         padding: 35px 0 20px;
     }
-
 }
