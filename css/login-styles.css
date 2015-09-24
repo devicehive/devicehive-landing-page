@@ -63,6 +63,9 @@
 .modal.fade.in {
     top: 10%;
 }
+.modal.fade.in.contact-modal {
+    top: 5%;
+}
 
 .modal .btn01,
 .modal .btn02,
