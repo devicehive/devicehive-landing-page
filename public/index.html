@@ -273,12 +273,12 @@
 
     <div id="signUpModal" class="modal fade sign-up-modal">
         <div class="modal-content">
-            <form>
+            <form target="dummyframe" action="signup" method="post" onsubmit="$('#signUpModal').modal('toggle');">
                 <a class="close close-modal-button" data-dismiss="modal"><span class="i-f-hex"><i class="i-f-delete"></i></span></a>
                 <h2>Keep in touch</h2>
                 <p>Sign up for our newsletter for info on new products, exlusive offers & awesome project ideas.</p>
-                <input class="modal-input" id="sub_email_popup" type="text" name="email" placeholder="Your Email">
-                <a href="#" onclick="email_subscribe('#sub_email_popup', '#signUpModal')" class="btn03 sign-up-btn" id="keepInTouchBtn">Sign Up</a>
+                <input class="modal-input" id="sub_email_popup" required type="text" name="email" placeholder="Your Email">
+                <button type="submit" class="btn03 sign-up-btn" id="keepInTouchBtn">Sign Up</button>
             </form>
         </div>
     </div>
@@ -287,16 +287,18 @@
         <div class="dec top"></div><div class="dec top"></div>
         <div class="modal-content">
             <a class="close close-modal-button" data-dismiss="modal"><span class="i-f-hex"><i class="i-f-delete"></i></span></a>
-            <form action="" name="contactForm" enctype="text/plain">
+            <form name="contactForm" target="dummyframe" action="contact" method="post" onsubmit="$('#contactModal').modal('toggle');">
                 <h2>Contact us</h2>
-                <input class="modal-input" type="text" name="user_name" placeholder="Name">
-                <input class="modal-input" type="text" name="user_company" placeholder="Company">
-                <input class="modal-input" type="text" name="email" placeholder="Email">
-                <textarea class="modal-textarea" name="user_message"></textarea>
-                <a href="#" class="btn03 sign-up-btn" id="contactBtn">Send</a>
+                <input class="modal-input" type="text" required name="name" placeholder="Name">
+                <input class="modal-input" type="text" name="company" placeholder="Company">
+                <input class="modal-input" type="text" required name="email" placeholder="Email">
+                <textarea class="modal-textarea" required name="message"></textarea>
+                <button type="submit" class="btn03 sign-up-btn" id="contactBtn">Send</button>
             </form>
         </div>
     </div>
+
+    <iframe width="0" height="0" border="0" name="dummyframe" id="dummyframe" style="display: none;"></iframe>
 
     </body>
 

@@ -115,6 +115,14 @@ textarea {
     height: 60px;
 }
 
+input[type=button],
+input[type=submit],
+input[type=reset],
+input[type=file],
+button {
+	border-width: 0px;
+}
+
 input[type=text],
 input[type=password] {
     font-style: italic;

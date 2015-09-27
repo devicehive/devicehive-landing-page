@@ -7,10 +7,12 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var request = require('request');
 
-
 var apiUrl = 'https://us6.api.mailchimp.com/3.0/';
-var apiKey = process.env.MAILCHIMP_API_KEY;
+var mailChimpKey = process.env.MAILCHIMP_API_KEY;
 var listId = '9c9f14f529';
+
+var sendGridKey = process.env.SENDGRID_API_KEY;
+
 
 var app = express();
 
@@ -25,11 +27,18 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-/**
- * Async call handler.
- * Called from public/javascripts/index.js (onUserLoaded)
- */
-app.all('/subscribe/:email', function (req, res) {
+var nodemailer = require('nodemailer');
+var sgTransport = require('nodemailer-sendgrid-transport');
+// api key https://sendgrid.com/docs/Classroom/Send/api_keys.html
+var options = {
+    auth: {
+        api_key: sendGridKey
+    }
+};
+var transporter = nodemailer.createTransport(sgTransport(options));
+
+
+app.post('/subscribe/:email', function (req, res) {
 
   var email = req.params.email;
   if (!email) return res.status(400).json({error:'email is required'});
@@ -39,7 +48,7 @@ app.all('/subscribe/:email', function (req, res) {
     var options = {
       'auth': {
         'user': 'apikey',
-        'pass': apiKey,
+        'pass': mailChimpKey,
         'sendImmediately': true
       },
       'json': {'email_address': email, 'status': 'subscribed'}
@@ -63,9 +72,40 @@ app.all('/subscribe/:email', function (req, res) {
 
   } catch (error) {
     console.log(error.message);
-    return res.status(500).json({error: 'Mailchimp api error'});
+    return res.status(500).json({error: 'Error sending email'});
   }
 
+});
+
+
+
+app.post('/contact', function (req, res) {
+
+    var data = req.body;
+
+    console.log('CONTACT', data);
+
+    try {
+
+        var sender = data.name + ' <' + data.email + '>';
+
+        transporter.sendMail({
+            from: sender,
+            to: 'info@devicehive.com',
+            subject: 'Contact Us Form',
+            text:
+                 'Name: ' + data.name + '\r\n\r\n'
+                 +'Company: ' + data.company + '\r\n\r\n' +
+                data.message
+        });
+
+        return res.status(200).json({status: 'Sent'});
+
+
+    } catch (error) {
+        console.log(error.message);
+        return res.status(500).json({error: 'Error sending email'});
+    }
 });
 
 
