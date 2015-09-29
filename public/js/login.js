@@ -1,9 +1,9 @@
 $(document).ready(function() {
-    if($.cookie('visitor-passport') !== 'visitors-passport'){
-        $.cookie('visitor-passport','visitors-passport', { expires: 365});
-        var date = new Date;
-        $('#signUpModal').modal('show');
-    }
+    // if($.cookie('visitor-passport') !== 'visitors-passport'){
+    //     $.cookie('visitor-passport','visitors-passport', { expires: 365});
+    //     var date = new Date;
+    //     $('#signUpModal').modal('show');
+    // }
     $('#menuContactUs').bind("click", function(e){
         $('.menuOverlay').hide();
         $('#contactModal').modal('show');
