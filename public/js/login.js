@@ -1,9 +1,18 @@
 $(document).ready(function() {
-    // if($.cookie('visitor-passport') !== 'visitors-passport'){
-    //     $.cookie('visitor-passport','visitors-passport', { expires: 365});
-    //     var date = new Date;
-    //     $('#signUpModal').modal('show');
-    // }
+
+    var visit_counter = $.cookie('_v_count');
+
+    if (visit_counter === '0') {
+        $('#signUpModal').modal('show');
+    }
+
+    if (!isNaN(parseInt(visit_counter))) {
+        visit_counter++;
+    }
+    else visit_counter = 0;
+
+    $.cookie('_v_count', visit_counter, { expires: 365});
+
     $('#menuContactUs').bind("click", function(e){
         $('.menuOverlay').hide();
         $('#contactModal').modal('show');
@@ -13,20 +22,4 @@ $(document).ready(function() {
         $('.menuOverlay').hide();
         $('#contactModal').modal('show');
     });
-    /*$('#menuPlayground').bind("click", function(e){
-        $('.menuOverlay').hide();
-        $('.mainContent').toggleClass('hide');
-        $('#loginModal').toggleClass('hide');
-    });
-
-    $('#loginBtn').bind("click", function(e){
-        $('.mainContent').toggleClass('hide');
-        $('#loginModal').toggleClass('hide');
-    });
-
-    $('#signupBtn').bind("click", function(e){
-        $('.mainContent').toggleClass('hide');
-        $('#loginModal').toggleClass('hide');
-    });*/
-
 });
