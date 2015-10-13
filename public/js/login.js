@@ -1,17 +1,17 @@
 $(document).ready(function() {
 
-    var visit_counter = $.cookie('_v_count');
+    // var visit_counter = $.cookie('_v_count');
 
-    if (visit_counter === '0') {
-        $('#signUpModal').modal('show');
-    }
+    // if (visit_counter === '0') {
+    //     $('#signUpModal').modal('show');
+    // }
 
-    if (!isNaN(parseInt(visit_counter))) {
-        visit_counter++;
-    }
-    else visit_counter = 0;
+    // if (!isNaN(parseInt(visit_counter))) {
+    //     visit_counter++;
+    // }
+    // else visit_counter = 0;
 
-    $.cookie('_v_count', visit_counter, { expires: 365});
+    // $.cookie('_v_count', visit_counter, { expires: 365});
 
     $('#menuContactUs').bind("click", function(e){
         $('.menuOverlay').hide();
