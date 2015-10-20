@@ -50,6 +50,7 @@ $(function(){
 				$(popup).modal('toggle');
 			}
 			$(field).val('');
+			ga('send', 'pageview', {'page': location.pathname + location.search  + '#subscribed'});
 			alert('Subscribed! We\'ll keep in touch.');
 		}).fail(function(error) {
 			console.log(error);
