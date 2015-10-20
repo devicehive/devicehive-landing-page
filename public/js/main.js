@@ -50,7 +50,7 @@ $(function(){
 				$(popup).modal('toggle');
 			}
 			$(field).val('');
-			alert('Subscribed! We\'ll keep you in touch.');
+			alert('Subscribed! We\'ll keep in touch.');
 		}).fail(function(error) {
 			console.log(error);
 			alert('Oops, something went wrong!');
