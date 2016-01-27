@@ -63,9 +63,9 @@ app.post('/subscribe/:email', cors(), function (req, res) {
           if (response.statusCode == 400 && body  && body.title == 'Member Exists')
             return res.status(200).json({email: email, status: 'Existing Subscriber'});
 
-          if (!error && response.statusCode >= 300) {
-            console.log(body);
-            return res.status(500).json({error: 'Mailchimp api error', details: body.detail});
+          if (error || response.statusCode >= 300) {
+            console.log(error, body);
+            return res.status(500).json({error: 'Mailchimp api error', details: error || body.detail});
           }
 
           return res.status(200).json({email: email, status: 'Subscribed'});
