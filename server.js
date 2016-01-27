@@ -55,7 +55,7 @@ app.post('/subscribe/:email', cors(), function (req, res) {
       'json': {'email_address': email, 'status': 'subscribed'}
     };
 
-    var lid = req.params.list || listId;
+    var lid = req.query.list || listId;
 
     request.post(apiUrl + 'lists/' + lid + '/members/', options,
         function callback(error, response, body) {
