@@ -6,6 +6,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var request = require('request');
+var cors = require('cors');
 
 var apiUrl = 'https://us6.api.mailchimp.com/3.0/';
 var mailChimpKey = process.env.MAILCHIMP_API_KEY;
@@ -38,7 +39,7 @@ var options = {
 var transporter = nodemailer.createTransport(sgTransport(options));
 
 
-app.post('/subscribe/:email', function (req, res) {
+app.post('/subscribe/:email', cors(), function (req, res) {
 
   var email = req.params.email;
   if (!email) return res.status(400).json({error:'email is required'});
@@ -54,7 +55,9 @@ app.post('/subscribe/:email', function (req, res) {
       'json': {'email_address': email, 'status': 'subscribed'}
     };
 
-    request.post(apiUrl + 'lists/' + listId + '/members/', options,
+    var lid = req.params.list || listId;
+
+    request.post(apiUrl + 'lists/' + lid + '/members/', options,
         function callback(error, response, body) {
 
           if (response.statusCode == 400 && body  && body.title == 'Member Exists')
@@ -72,7 +75,7 @@ app.post('/subscribe/:email', function (req, res) {
 
   } catch (error) {
     console.log(error.message);
-    return res.status(500).json({error: 'Error sending email'});
+    return res.status(500).json({error: 'Error subscribing to mailing list.'});
   }
 
 });
