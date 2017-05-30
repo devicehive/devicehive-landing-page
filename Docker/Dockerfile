@@ -17,9 +17,9 @@ RUN rm -f /etc/service/nginx/down \
     && rm /etc/nginx/sites-enabled/default
 
 # copy landing page website files
-RUN curl -L "${SOURCE_REPOSITORY_URL:-https://github.com/devicehive/devicehive-landing-page}/archive/${SOURCE_BRANCH:-master}.tar.gz" | tar -zxf- -C /tmp \
-    && mv /tmp/devicehive-landing-page-master /home/app/landingpage \
+RUN mkdir /home/app/landingpage \
     && cd /home/app/landingpage \
+    && curl -L "${SOURCE_REPOSITORY_URL:-https://github.com/devicehive/devicehive-landing-page}/archive/${SOURCE_BRANCH:-master}.tar.gz" | tar -xzf - --strip-components=1 \
     && npm install . \
     && npm cache clean \
     && chown -R app:app /home/app/landingpage
