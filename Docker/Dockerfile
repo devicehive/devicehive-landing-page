@@ -26,3 +26,4 @@ RUN mkdir /home/app/landingpage \
 
 # register landing page website in nginx
 ADD landingpage.conf /etc/nginx/sites-enabled/landingpage.conf
+ADD nginx-env.conf /etc/nginx/main.d/nginx-env.conf
