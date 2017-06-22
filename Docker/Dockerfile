@@ -1,4 +1,4 @@
-FROM phusion/passenger-nodejs
+FROM phusion/passenger-nodejs:0.9.22
 
 ARG SOURCE_REPOSITORY_URL
 ARG SOURCE_BRANCH
@@ -21,7 +21,7 @@ RUN mkdir /home/app/landingpage \
     && cd /home/app/landingpage \
     && curl -L "${SOURCE_REPOSITORY_URL:-https://github.com/devicehive/devicehive-landing-page}/archive/${SOURCE_BRANCH:-master}.tar.gz" | tar -xzf - --strip-components=1 \
     && npm install . \
-    && npm cache clean \
+    && npm cache clean --force \
     && chown -R app:app /home/app/landingpage
 
 # register landing page website in nginx
