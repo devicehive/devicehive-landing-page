@@ -24,6 +24,11 @@ RUN mkdir /home/app/landingpage \
     && npm cache clean --force \
     && chown -R app:app /home/app/landingpage
 
+RUN mkdir -p /home/app/landingpage/public/restful \
+    && cd /home/app/landingpage/public/restful \
+    && curl -L https://github.com/devicehive/devicehive-rest-api-docs/archive/master.tar.gz | tar -xzf - --strip-components=1 \
+    && chown -R app:app /home/app/landingpage
+
 # register landing page website in nginx
 ADD landingpage.conf /etc/nginx/sites-enabled/landingpage.conf
 ADD nginx-env.conf /etc/nginx/main.d/nginx-env.conf
