@@ -1,0 +1,68 @@
+{{ define "main" }}
+
+<div class="light-page download-page">
+    <div class="preloader"></div>
+    {{ partial "header" . }}
+
+    <div class="light-page_body download-page_body">
+        <h1 class="light-page_h1">
+            {{ .Title }}
+        </h1>
+
+        <div class="downloads-container">
+            <ul class="downloads-lists">
+                <li class="downloads-item downloads-item__server unordered-list">
+                    <div class="hexagon">
+                        <div class="svg-icon svg-download-server"></div>
+                    </div>
+                    <h2 class="downloads-item_title">DeviceHive Server</h2>
+                    <ul>
+                        <li>Download <a class="track-link downloads-item_link" href="https://github.com/devicehive/devicehive-java-server/releases/latest" target="_blank">server sources</a></li>
+                        <li>Deploy DeviceHive with <a class="track-link downloads-item_link" href="https://github.com/devicehive/devicehive-docker/releases/latest" target="_blank">Docker</a></li>
+                        <li>Read <a class="track-link downloads-item_link" href="https://docs.devicehive.com/docs/server-installation" target="_blank">manual</a></li>
+                    </ul>
+                </li>
+                <li class="downloads-item downloads-item__libraries unordered-list">
+                    <div class="hexagon">
+                        <div class="svg-icon svg-download-libraries"></div>
+                    </div>
+                    <h2 class="downloads-item_title">Client Libraries</h2>
+                    <p>Client libraries with the simple API for server connectivity to build your own solution.</p>
+                    <ul>
+                        <li>Download <a class="track-link downloads-item_link" href="https://github.com/devicehive/devicehive-python/releases/latest" target="_blank">Python library</a></li>
+                        <li>Read <a class="track-link downloads-item_link" href="https://github.com/devicehive/devicehive-python/blob/stable/README.md" target="_blank">manual for Python library</a></li>
+                        <li>Download <a class="track-link downloads-item_link" href="https://github.com/devicehive/devicehive-node/releases/latest" target="_blank">Node.js library</a></li>
+                        <li>Read manual for <a class="track-link downloads-item_link" href="https://github.com/devicehive/devicehive-node/blob/master/README.md" target="_blank">Node.js library</a></li>
+                        <li>Download <a class="track-link downloads-item_link" href="https://github.com/devicehive/devicehive-java/releases/latest">Java library</a><br>including Android and Android Things support</li>
+                        <li>Read <a class="track-link downloads-item_link" href="https://github.com/devicehive/devicehive-java/blob/master/README.md">manual for Java library</a></li>
+                    </ul>
+                </li>
+                <li class="downloads-item downloads-item__firmware unordered-list">
+                    <div class="hexagon">
+                        <div class="svg-icon svg-download-firmware"></div>
+                    </div>
+                    <h2 class="downloads-item_title">ESP8266 Firmware</h2>
+                    <ul>
+                        <li>Download <a class="track-link downloads-item_link" href="https://github.com/devicehive/esp8266-firmware/releases/latest" target="_blank">ESP8266 firmware</a> allowing to connect this chip to DeviceHive.</li>
+                        <li>Read <a class="track-link downloads-item_link" href="https://github.com/devicehive/esp8266-firmware/blob/develop/README.md">manual for ESP8266 firmware</a></li>
+                    </ul>
+                </li>
+                <li class="downloads-item downloads-item__more unordered-list">
+                    <div class="hexagon">
+                        <div class="svg-icon svg-download-more"></div>
+                    </div>
+                    <h2 class="downloads-item_title">More</h2>
+                    <p>
+                        Visit <a class="track-link downloads-item_link" href="https://github.com/devicehive" target="_blank">our GitHub</a> to find more cool libraries, examples, and demo projects
+                    </p>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    {{ partial "footer" . }}
+
+</div>
+{{ end }}
+

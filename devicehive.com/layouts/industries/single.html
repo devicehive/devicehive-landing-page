@@ -1,0 +1,32 @@
+{{ define "main" }}
+    <main class="light-page industries-page__detail industries-page">
+        <div class="preloader"></div>
+        {{ partial "header" . }}
+
+        <div class="industries-detail_body">
+            <div class="light-page_body">
+                <div class="industries-detail_img">
+                    <div class="svg-icon {{ .Params.Icon }}"></div>
+                </div>
+                <h1 class="light-page_h1">
+                    {{ .Params.PageTitle }}
+                </h1>
+
+                <div class="industries-detail_content">
+
+                    {{ .Content }}
+
+                    <div class="back-link">
+                        <a href="/industries/">
+                            More Industries
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        {{ partial "footer" . }}
+
+    </main>
+{{ end }}

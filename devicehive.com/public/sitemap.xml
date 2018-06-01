@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/error/</loc>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/industries/</loc>
+  </url>
+  
+  <url>
+    <loc>/download/</loc>
+  </url>
+  
+  <url>
+    <loc>/industries/industrial-iot/</loc>
+  </url>
+  
+  <url>
+    <loc>/industries/automotive/</loc>
+  </url>
+  
+  <url>
+    <loc>/industries/blockchain/</loc>
+  </url>
+  
+  <url>
+    <loc>/industries/energy&#43;utilities/</loc>
+  </url>
+  
+  <url>
+    <loc>/industries/healthcare&#43;life-sciences/</loc>
+  </url>
+  
+  <url>
+    <loc>/industries/insurance/</loc>
+  </url>
+  
+  <url>
+    <loc>/industries/retail/</loc>
+  </url>
+  
+  <url>
+    <loc>/industries/smart-environments/</loc>
+  </url>
+  
+  <url>
+    <loc>/industries/telecom/</loc>
+  </url>
+  
+  <url>
+    <loc>/industries/travel&#43;hospitality/</loc>
+  </url>
+  
+  <url>
+    <loc>/industries/wearables/</loc>
+  </url>
+  
+  <url>
+    <loc>/services/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

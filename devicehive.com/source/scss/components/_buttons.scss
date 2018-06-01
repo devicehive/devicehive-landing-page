@@ -1,0 +1,130 @@
+//**
+// Buttons
+//**
+
+// Buttons colors white palette
+$btn-color:  #1284e3;
+$white-btn-bg-active: rgba(18, 132, 227, 0.13);
+$white-btn-color-disabled: #b3b8c3;
+$white-btn-bg-disabled: #e9edef;
+$btn-height: 50px;
+
+// Buttons colors blue palette
+$blue-btn-bg-hover: #309af1;
+$blue-btn-bg-active: #0472cd;
+$blue-btn-bg-disabled: #5f95c3;
+$blue-btn-color-disabled: #9fbcd4;
+
+//Link btn color styles
+$link-btn-color: #57b3ff;
+$link-btn-br-color: #51a5ec;
+
+// Default button styles
+%btn-white {
+  border-radius: $btn-br;
+  background-color: $white;
+  border: none;
+  height: $btn-height;
+  line-height: $btn-height;
+  color: $btn-color;
+  display: inline-block;
+  font-size: 0.938em;
+  outline: none;
+  padding: 0 10px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: capitalize;
+  box-sizing: border-box;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color .2s ease-in-out,
+              background-color .2s ease-in-out,
+              box-shadow .2s ease-in-out;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.34);
+    text-decoration: none;
+  }
+
+  &:active {
+    background-color: rgba(18, 132, 227, 0.13);
+  }
+
+  &[disabled],
+  &.disabled{
+    background-color: $white-btn-bg-disabled;
+    color: $white-btn-color-disabled;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
+  }
+}
+
+// Default button styles
+%btn-blue {
+  border-radius: $btn-br;
+  background-color: $btn-color;
+  border: none;
+  color: $white;
+  display: inline-block;
+  font-size: 0.938em;
+  outline: none;
+  padding: 0 10px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: capitalize;
+  box-sizing: border-box;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color .2s ease-in-out,
+  background-color .2s ease-in-out,
+  box-shadow .2s ease-in-out;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.34);
+    text-decoration: none;
+    background-color: $blue-btn-bg-hover;
+  }
+
+  &:active {
+    background-color: rgba(18, 132, 227, 0.13);
+  }
+
+  &[disabled],
+  &.disabled{
+    background-color: $blue-btn-bg-disabled;
+    color: $blue-btn-color-disabled;
+  }
+}
+
+.primary-btn{
+  width: 170px;
+  @extend %btn-white;
+
+  @include responsive($desktop-medium){
+    width: 220px;
+    height: 50px;
+  }
+}
+
+.secondary-btn{
+  @extend %btn-blue;
+}
+
+.link-btn-blue{
+  font-weight: 600;
+  line-height: 1.25;
+  text-decoration: none;
+  color: $link-btn-color;
+  border-bottom: 2px solid;
+  border-color: transparent;
+  transition: color .2s ease-in-out,
+              border-color .2s ease-in-out;
+  &:hover,
+  &:focus,
+  &:active{
+    text-decoration: none;
+    border-color: $link-btn-br-color;
+  }
+}
+

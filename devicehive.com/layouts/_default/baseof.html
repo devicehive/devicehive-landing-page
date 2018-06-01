@@ -1,0 +1,18 @@
+{{ partial "head" . }}
+
+{{ block "main" . }}
+
+{{ end }}
+
+<div id="subscribedMsg">
+    Check your inbox to confirm your subscription
+</div>
+
+{{ partial "intercom_partial.html" . }}
+
+{{ partial "google_analytics_async.html" . }}
+
+<script src="/js/main.min.js"></script>
+
+</body>
+</html>

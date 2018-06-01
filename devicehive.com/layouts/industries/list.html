@@ -1,0 +1,39 @@
+{{ define "main" }}
+
+{{ $industries := getJSON "/data/industries.json" }}
+    <div class="light-page industries-page">
+        <div class="preloader"></div>
+        {{ partial "header" . }}
+
+        <div class="light-page_body all-industries-page">
+            <h1 class="light-page_h1">
+                {{ .Title }}
+            </h1>
+            <ul class="industries-container">
+                {{ range $industries }}
+                <li class="industry-item">
+                    {{ if .state }}
+                    <div class="industry-item_link {{ .state }}">
+                        <div class="industry-item_img">
+                            <div class="svg-icon {{ .icon }}"></div>
+                        </div>
+                        <h2 class="industry-item_title">{{ .name }}</h2>
+                    </div>
+                    {{else}}
+                    <a href="{{ .url }}" class="industry-item_link track-link">
+                        <div class="industry-item_img">
+                            <div class="svg-icon {{ .icon }}"></div>
+                        </div>
+                        <h2 class="industry-item_title">{{ .name }}</h2>
+                    </a>
+                    {{end}}
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+
+        {{ partial "footer" . }}
+
+    </div>
+{{ end }}
+

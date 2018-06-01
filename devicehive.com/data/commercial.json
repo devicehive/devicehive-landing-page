@@ -1,0 +1,90 @@
+[{
+  "name": "Bronze Tier",
+  "price": "Free",
+  "description": [{
+    "consulting": [
+      "",
+      "Intercom",
+      "Email"
+    ],
+    "maintenance": [
+      "",
+      "&mdash;"
+    ],
+    "responseTime": [
+      "",
+      "2 business days"
+    ],
+    "releases": [
+      "",
+      "Standard schedule"
+    ]
+  }]
+}, {
+  "name": "Silver Tier",
+  "price": "Includes Bronze",
+  "description": [{
+    "consulting": [
+      "",
+      "Intercom",
+      "Email"
+    ],
+    "maintenance": [
+      "+",
+      "Up to 10 hours/month, if something broke up - hot fixes"
+    ],
+    "responseTime": [
+      "",
+      "1 business day"
+    ],
+    "releases": [
+      "",
+      "1 per 2 months"
+    ]
+  }]
+}, {
+  "name": "Gold Tier",
+  "price": "Includes Silver",
+  "description": [{
+    "consulting": [
+      "",
+      "Intercom",
+      "Email"
+    ],
+    "maintenance": [
+      "++",
+      "Up to 40 hours/month, if something broke up - hot fixes"
+    ],
+    "responseTime": [
+      "++",
+      "2 hours (during business hours)"
+    ],
+    "releases": [
+      "++",
+      "1 per month"
+    ]
+  }]
+}, {
+  "name": "Platinum Tier",
+  "price": "Includes Gold",
+  "description": [{
+    "consulting": [
+      "+",
+      "Intercom",
+      "Email",
+      "Dedicated contact"
+    ],
+    "maintenance": [
+      "+++",
+      "12x5 or 24x7 options available"
+    ],
+    "responseTime": [
+      "+++",
+      "12x5 or 24x7 options available"
+    ],
+    "releases": [
+      "",
+      "At least 1 per month"
+    ]
+  }]
+}]

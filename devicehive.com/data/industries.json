@@ -1,0 +1,55 @@
+[{"id": "1",
+  "name": "Automotive",
+  "icon": "svg-logistics-color",
+  "url": "/industries/automotive/"
+}, {
+  "id": "2",
+  "name": "Energy & Utilities",
+  "icon": "svg-utilities",
+  "url": "/industries/energy+utilities/"
+}, {
+  "id": "3",
+  "name": "Smart Environments",
+  "icon": "svg-smart-cities-color",
+  "url": "/industries/smart-environments/"
+}, {
+  "id": "4",
+  "name": "Healthcare & Life Sciences",
+  "icon": "svg-healthcare",
+  "url": "/industries/healthcare+life-sciences/"
+}, {
+  "id": "5",
+  "name": "Travel & Hospitality",
+  "icon": "svg-travel",
+  "url": "/industries/travel+hospitality/"
+}, {
+  "id": "6",
+  "name": "Industrial IoT",
+  "icon": "svg-industrial-color",
+  "url": "/industries/industrial-iot/"
+}, {
+  "id": "7",
+  "name": "Wearables",
+  "icon": "svg-wearables-color",
+  "url": "/industries/wearables/"
+}, {
+  "id": "8",
+  "name": "Telecom",
+  "icon": "svg-telecom-color",
+  "url": "/industries/telecom/"
+}, {
+  "id": "9",
+  "name": "Blockchain",
+  "icon": "svg-blockchain-color",
+  "url": "/industries/blockchain/"
+}, {
+  "id": "10",
+  "name": "Insurance",
+  "icon": "svg-insurance-color",
+  "url": "/industries/insurance/"
+}, {
+  "id": "11",
+  "name": "Retail",
+  "icon": "svg-retail-color",
+  "url": "/industries/retail/"
+}]

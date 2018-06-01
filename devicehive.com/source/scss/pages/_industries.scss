@@ -1,0 +1,289 @@
+.light-page{
+  $heading-blue-color: #133048;
+  $heading-bright-blue-color: #1284e3;
+
+  &.industries-page{
+    @include background-image-retina('/img/bg-light', png, cover);
+  }
+
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  padding: 130px 0 196px;
+
+  @include responsive($desktop-medium){
+    padding-bottom: 315px;
+    padding-top: 66px;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding-bottom: 386px;
+  }
+
+  .preloader{
+    background-color: #f6f8fa;
+  }
+
+  .light-header__logo{
+    margin-top: 20px;
+    width: 160px;
+    height: 48px;
+    display: inline-block;
+    margin-left: 30px;
+    @include responsive($desktop-medium) {
+      width: 107px;
+      height: 33px;
+      margin-top: 14px;
+      margin-left: 20px;
+    }
+
+    &__img{
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+      @include background-image-retina('/img/logos', png, 322px, 189px);
+      background-position: -163px -108px;
+
+      @include responsive($desktop-medium){
+        background-position: -168px -156px;
+      }
+    }
+  }
+
+  .header {
+    height: 88px;
+    &.bg-header{
+      background-color: #133048;
+
+      .light-header__logo__img{
+        background-position: 0 -130px;
+      }
+
+      .nav__link {
+        color: rgba(255,255,255,0.7);
+        transition: color .2s ease-in-out;
+
+        &:hover{
+          color: #fff;
+        }
+
+        &.active {
+          color: #fff;
+        }
+      }
+    }
+
+    @include responsive($desktop-medium){
+      height: 60px;
+
+      &.bg-header{
+        .light-header__logo__img{
+          background-position: -168px -76px;
+        }
+      }
+    }
+  }
+
+  .light-page{
+    &_h1 {
+      line-height: 1.25;
+      font-size: 3.5em;
+      color: $heading-blue-color;
+      font-weight: 300;
+      margin: 13px 15px 0;
+
+      @include responsive($desktop){
+        font-size: 2.8em;
+      }
+
+      @include responsive($desktop-medium){
+        font-size: 2.25em;
+        text-align: center;
+      }
+
+      @include responsive($mobile){
+        margin-bottom: 10px;
+      }
+
+    }
+
+    &__container{
+      box-sizing: border-box;
+    }
+
+    &_body{
+      max-width: 1170px;
+      margin: 0 auto;
+      transition: width .2s ease-in;
+
+      &.all-industries-page{
+        @include responsive ($desktop-lg){
+          max-width: 840px;
+        }
+
+        @include responsive ($desktop-medium){
+            max-width: 736px;
+        }
+
+        @include responsive ($tablet){
+          max-width: 416px;
+        }
+
+        @include responsive ($tablet){
+          max-width: 416px;
+        }
+
+        @include responsive($mobile){
+          width: 300px;
+        }
+      }
+
+      &__industries{
+        padding-top: 30px;
+        max-width: 1230px;
+      }
+    }
+  }
+
+  .industries-container{
+    list-style-type: none;
+    overflow: hidden;
+    margin: 45px 0 0;
+    padding: 0 0 55px;
+
+    @include responsive($desktop-medium){
+      padding: 0 5px 55px;
+      margin-top: 32px;
+    }
+
+    @include responsive($mobile){
+      width: 200px;
+      margin: 0 auto;
+    }
+
+    .industry-item{
+      border-radius: 2px;
+      box-sizing: border-box;
+      float: left;
+      padding: 15px;
+      text-align: center;
+      transition: width .2s ease-in;
+
+      @include responsive($desktop-lg){
+        padding: 10px;
+        &_img{
+          height: 170px;
+          width: 178px;
+          margin: 0 auto;
+          .svg-icon{
+            margin: 0 auto 0;
+            transform: scale(0.8);
+            transform-origin: top left;
+          }
+        }
+      }
+
+      @include responsive($desktop-medium){
+        padding: 5px;
+        &_img{
+          height: 158px;
+        }
+      }
+
+      a{
+        text-decoration: none;
+      }
+
+      &_img{
+        .svg-icon{
+          margin: 0 auto 0;
+        }
+      }
+
+      @include responsive($tablet){
+        &_img{
+          height: 130px;
+          width: 130px;
+          margin: 0 auto;
+          .svg-icon{
+            margin: 0 auto 0;
+            transform: scale(0.6);
+            transform-origin: top left;
+          }
+        }
+      }
+
+      h2, &_title{
+        font-size: 1.5em;
+        line-height: 1.25;
+        text-align: center;
+        font-family: NotoSans, sans-serif;
+        margin-top: 6px;
+        color: $heading-bright-blue-color;
+
+        @include responsive($desktop-lg){
+          font-size: 1.25em;
+          padding: 0 10px;
+        }
+
+        @include responsive($desktop-medium){
+          font-size: 1em;
+          margin-bottom: 0;
+          line-height: 1.4;
+        }
+
+        @include responsive($tablet){
+          font-size: 0.875em;
+        }
+
+      }
+
+      &_link{
+        background-color: #f6f8fa;
+        display: block;
+        height: 360px;
+        width: 360px;
+        padding: 30px;
+        box-sizing: border-box;
+        transition: box-shadow .2s ease-in-out;
+
+        @include responsive($desktop-lg){
+          padding: 20px 10px;
+          height: 260px;
+          width: 260px;
+        }
+
+        @include responsive($desktop-medium){
+          background-color: rgba(246, 248, 250, 0.7);
+          height: 232px;
+          width: 232px;
+          padding: 10px;
+        }
+
+        @include responsive($tablet){
+          height: 190px;
+          width: 190px;
+        }
+
+        &:hover{
+          box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.15);
+        }
+
+        &.disabled{
+          &:hover{
+            box-shadow: none;
+          }
+
+          .industry-item_title{
+             color: $heading-blue-color;
+          }
+        }
+
+      }
+    }
+  }
+}

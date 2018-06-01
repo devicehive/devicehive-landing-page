@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DeviceHive - Open Source IoT Data Platform with the wide range of integration options.</title>
+    <link>/</link>
+    <description>Recent content on DeviceHive - Open Source IoT Data Platform with the wide range of integration options.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Industrial IoT - DeviceHive</title>
+      <link>/industries/industrial-iot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/industries/industrial-iot/</guid>
+      <description> Use cases:  Cloud-based data storage and analytics Workforce tracking Failure mitigation and safety control Predictive maintenance Work safety Production lines control &amp;amp; automation CNC   </description>
+    </item>
+    
+    <item>
+      <title>IoT for Automotive - DeviceHive</title>
+      <link>/industries/automotive/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/industries/automotive/</guid>
+      <description>Digitalize your services, collect and analyze vehicle data, connect it to the cloud, or integrate it with smart environments. DeviceHive addresses one of the main disruptive challenges of the modern automotive industry – connectivity. DeviceHive gathers data from OBDII, CAN, sensors, or any other smart device installed into an automobile. Any iOS, Android, or Linux device can be a gateway to send data to the cloud. Easy to integrate with data providers – maps, traffic jam services, smart parking, taxi APIs, etc.</description>
+    </item>
+    
+    <item>
+      <title>IoT for Blockchain - DeviceHive</title>
+      <link>/industries/blockchain/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/industries/blockchain/</guid>
+      <description> Use cases:  Data for smart contracts Automated payments between devices Decentralized database Immutable storage   </description>
+    </item>
+    
+    <item>
+      <title>IoT for Energy &amp; Utilities - DeviceHive</title>
+      <link>/industries/energy&#43;utilities/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/industries/energy&#43;utilities/</guid>
+      <description>DeviceHive delivers a holistic view of technology to help utility companies manage data-driven transformations, face digitization challenges, and achieve business goals. With an increasing number of smart devices, DeviceHive provides valuable data insights for companies and customers, enables effective usage of resources, and allows faster and more flexible adaptation of new technologies answering the market demand. DeviceHive supports the most popular utility industry protocols like LoRa, SigFox, and MBus. The platform’s microservice architecture easily integrates with any infrastructure or solution.</description>
+    </item>
+    
+    <item>
+      <title>IoT for Healthcare &amp; Life Sciences - DeviceHive</title>
+      <link>/industries/healthcare&#43;life-sciences/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/industries/healthcare&#43;life-sciences/</guid>
+      <description> Use cases:  Manage medical devices Smart Hospital Environment Automation Predictive Maintenance Analytics and Data Management Fast Medical Devices Prototyping   </description>
+    </item>
+    
+    <item>
+      <title>IoT for Insurance - DeviceHive</title>
+      <link>/industries/insurance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/industries/insurance/</guid>
+      <description> Use cases:  Vehicle telematics and driving habits Home security (connected fire alarms) Wearable devices integration IoT data-driven insurance plans   </description>
+    </item>
+    
+    <item>
+      <title>IoT for Retail - DeviceHive</title>
+      <link>/industries/retail/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/industries/retail/</guid>
+      <description> Use cases:  Customer behavior learning/insight Smart checkout Inventory management &amp;amp; tracking Personalized customer marketing Warehouse automation   </description>
+    </item>
+    
+    <item>
+      <title>IoT for Smart Environments - DeviceHive</title>
+      <link>/industries/smart-environments/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/industries/smart-environments/</guid>
+      <description>The IoT disruption wave is changing industries forever. Smart environments become more than a combination of different smart services, it is important to have an ecosystem securely gathering, storing, and exchanging data between its parts. DeviceHive seamlessly integrates the components, acting as a central nervous system for smart environments like cities, offices, buildings, homes, factories, and other types of infrastructure. It provides the means and tools to analyze data, use Machine Learning and Artificial Intelligence, and to manage devices and services according to valuable insights.</description>
+    </item>
+    
+    <item>
+      <title>IoT for Telecom - DeviceHive</title>
+      <link>/industries/telecom/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/industries/telecom/</guid>
+      <description> Use cases:  IoT as a Service Wide connectivity options Service Integration Asset Management &amp;amp; Monitoring Indoor Navigation Application Enablement for Legacy Devices   </description>
+    </item>
+    
+    <item>
+      <title>IoT for Travel &amp; Hospitality - DeviceHive</title>
+      <link>/industries/travel&#43;hospitality/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/industries/travel&#43;hospitality/</guid>
+      <description> Make your hotel comfortable and modern for your guests. Gain insights into how to optimize your resources and services. Automate and manage your operations effectively. Automatically apply your guests’ preferences in all locations they visit. DeviceHive seamlessly and securely integrates with your hotel allowing you to control every feature and making it smart.
+Use cases:  Smart Environment Control Automation Asset management Resources optimization and predictive maintenance Personalization Smart rooms Media &amp;amp; Entertainment In-hotel food order, cleaning and other services Device management   </description>
+    </item>
+    
+    <item>
+      <title>IoT for Wearables - DeviceHive</title>
+      <link>/industries/wearables/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/industries/wearables/</guid>
+      <description> Use cases:  Fast device prototyping Device management Analytics and data management Device standalone connectivity Custom firmware Integration with other solutions   </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,125 @@
+.download-page{
+  $download-server: #093861;
+  $download-libraries: #10569a;
+  $download-firmware: #1465b7;
+  $download-more: #2986e1;
+
+  @include background-image-retina('/img/bg', jpg);
+  background-position: top center;
+  background-size: 100%;
+
+  @include responsive($tablet){
+    @include background-image-retina('/img/bg-light', png, cover);
+    background-size: cover;
+    background-position: center center;
+  }
+
+  &.light-page{
+    .light-page_body{
+      max-width: 960px;
+      background-size: cover;
+    }
+  }
+
+  .downloads-container{
+    background-color: #fafafa;
+    box-shadow: 0px 0px 14px 3px rgba(0, 0, 0, 0.1);
+    color: #204a6f;
+    padding: 80px 80px 0;
+    margin: 40px 0 125px;
+
+    @include responsive(1024px){
+      margin-left: 40px;
+      margin-right: 40px;
+    }
+
+    @include responsive($tablet){
+      padding: 50px 30px;
+    }
+
+    .downloads-lists{
+      overflow: hidden;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .downloads-item{
+      float: left;
+      width: 50%;
+      padding: 0 0 90px 10px;
+      box-sizing: border-box;
+
+      @include responsive($desktop-medium){
+        padding: 0 20px 50px 10px;
+        float: none;
+        width: 100%;
+
+        .svg-icon{
+          margin: 0 auto;
+        }
+      }
+
+      @include responsive($tablet){
+        padding: 0 0 20px 0;
+
+        .svg-icon{
+          transform: scale(0.8);
+          transform-origin: bottom;
+        }
+      }
+
+      p{
+        margin: 4px 0 8px;
+        line-height: 1.4;
+
+        @include responsive($tablet){
+          font-size: 14px;
+        }
+      }
+
+      &_title{
+        font-size: 1.875em;
+        color: #324b60;
+        font-weight: 400;
+        margin: 17px 0 0 0;
+
+        @include responsive($tablet){
+          font-size: 1.5em;
+        }
+      }
+
+      ul{
+        font-weight: 400;
+        box-sizing: border-box;
+        margin-top: 8px;
+
+        li{
+          line-height: 1.2;
+          padding-left: 26px;
+          position: relative;
+          margin: 0 0 11px;
+        }
+      }
+
+      &__libraries{
+        ul li{
+          line-height: 1.2;
+          margin: 0;
+
+          &:nth-child(2n){
+            margin-bottom: 12px;
+          }
+        }
+      }
+
+      &_link{
+        color: #0085df;
+        text-decoration: none;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{{ $currentPage := . }}
+<div class="nav-wrap">
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__item">
+                <a class="nav__link track-link" href="https://docs.devicehive.com" target="_blank">Documentation</a>
+            </li>
+            {{ range .Site.Menus.main }}
+            <li class="nav__item">
+                <a class="nav__link track-link {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{.URL}}">{{ .Name }}</a>
+            </li>
+            {{ end }}
+            <li class="nav__item">
+                <a class="nav__link track-link" href="https://blog.devicehive.com/"
+                   target="_blank">Blog</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link track-link" href="https://playground.devicehive.com" target="_blank">Playground</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link intercomBtn" href="#">Contact us</a>
+            </li>
+        </ul>
+    </nav>
+</div>

@@ -1,0 +1,29 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "DeviceHive - Open Source IoT Data Platform with the wide range of integration options."
+googleAnalytics = "UA-36033368-1"
+
+[params]
+    description = "DeviceHive is a free, highly scalable open-source IoT platform for data collection, processing and analysis, visualization, and device management with the broad range of integration options."
+    intercom = "ir6mnqpn"
+    copyrightArr = ["Developed by DataArt Solutions 2012-2017", "Distributed under Apache License 2.0"]
+
+[[menu.main]]
+    name = "Industries"
+    weight = 10
+    identifier = "DeviceHive in Industries"
+    url = "/industries/"
+
+[[menu.main]]
+    name = "Services"
+    weight = 10
+    identifier = "Services"
+    url = "/services/"
+
+[[menu.main]]
+    name = "Download"
+    weight = 10
+    identifier = "Download"
+    url = "/download/"
+
+

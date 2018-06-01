@@ -1,0 +1,31 @@
+// Reset default browser styles using Normalize
+@import "../../node_modules/normalize-scss/sass/_normalize.scss";
+
+// Import fonts from Google
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+
+// Set variables and reusable mixins
+@import "base/config";
+@import "base/mixins";
+@import 'base/svg';
+
+// Import typical layout styles
+@import "base/base";
+
+// Import reusable modules
+@import "components/buttons";
+@import "components/tables";
+@import "components/forms";
+@import "components/nav";
+@import "components/fullpage";
+
+// Specific project styles, add any section specific sass modules here
+@import "pages/home";
+@import "pages/error";
+@import "pages/industries";
+@import "pages/industries_detail";
+@import "pages/services";
+@import "pages/download";
+
+

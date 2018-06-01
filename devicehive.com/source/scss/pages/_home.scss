@@ -1,0 +1,348 @@
+//**
+// Homepage
+//**
+
+$logo-width: 160px;
+$logo-height: 128px;
+
+.logo {
+  margin-bottom: 85px;
+
+  @include responsive($desktop-lg) {
+    margin-bottom: 20px;
+  }
+
+  @media screen and (max-height: 800px) and (max-width: $desktop-lg){
+    margin-bottom: 3px;
+  }
+
+  @include responsive($desktop-medium) {
+    padding: 86px 0 36px;
+  }
+
+  &__img {
+    width: $logo-width;
+    height: $logo-height;
+    display: inline-block;
+    @include background-image-retina('/img/logos', png, 322px, 189px);
+
+    @include responsive($desktop-medium) {
+      width: 92px;
+      height: 75px;
+      background-position: -173px 0;
+    }
+    @include hidden-text;
+  }
+}
+
+%table-cell {
+  display: table-cell;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.main-section {
+  text-align: center;
+  @include background-image-retina('/img/photo', jpg, cover);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 4;
+  background-color: #0a2a44;
+
+  &__container {
+    display: table;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  @include responsive($desktop-medium){
+    display: block;
+
+    .get-started-btn{
+      position: absolute;
+      bottom: 110px;
+      left: 50%;
+      margin-left: -110px;
+    }
+
+  }
+
+  &__body {
+    @extend %table-cell;
+    position: relative;
+    z-index: 2;
+    padding: 60px $padding 140px;
+
+    @include responsive($desktop-medium){
+      padding: 0 0 110px;
+      display: block;
+    }
+  }
+
+  .main-page {
+    padding-bottom: 80px;
+
+    &__h1 {
+      font-size: 4.5em;
+      line-height: 1.2;
+
+      @include responsive($desktop-lg) {
+        font-size: 2.25em;
+        line-height: 1.67;
+        margin-bottom: 18px;
+        padding: 0 10px;
+      }
+
+      @media screen and (max-height: 800px) and (max-width: $desktop-lg) {
+        margin-bottom: 5px;
+      }
+
+    }
+
+    &__h2 {
+      @include responsive($desktop-medium) {
+        font-size: 0.938em;
+        margin-bottom: 56px;
+        padding: 0 10px;
+      }
+    }
+
+    @include responsive($desktop-medium) {
+      &__bottom {
+        display: none;
+      }
+    }
+
+    &__description {
+      color: #fff;
+      opacity: 0.75;
+      line-height: 1.25;
+      margin-top: 64px;
+      margin-bottom: 20px;
+
+      @media screen and (max-height: 800px) and (max-width: $desktop-lg){
+        margin-bottom: 14px;
+      }
+
+      @include responsive($desktop-medium) {
+        margin-top: 24px;
+        margin-bottom: 10px;
+      }
+
+    }
+  }
+
+  .scroll-down {
+    $line-height: 60px;
+    $line-height-abs: -60px;
+
+    $scroll-btn-width: 200px;
+    position: absolute;
+    bottom: 86px;
+    text-align: center;
+    width: $scroll-btn-width;
+    left: 50%;
+    z-index: 2;
+    margin-left: -($scroll-btn-width/2);
+
+    &__line {
+      height: $line-height;
+      width: 2px;
+      left: 50%;
+      bottom: -64px;
+      margin-left: -1px;
+      position: absolute;
+
+      @include responsive($desktop-medium) {
+        height: $line-height;
+        bottom: -62px;
+      }
+
+      span {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,  rgba(255,255,255, 1) 50%, rgba(255,255,255,0) 100%);
+        background-position: 0 $line-height-abs;
+        background-size: 100% 200%;
+        animation: scrolldown 2.2s linear forwards infinite;
+      }
+
+    }
+
+    @media screen and (max-height: 800px) and (max-width: $desktop-lg){
+      bottom: 54px;
+      &__line {
+        height: 40px;
+        bottom: -44px;
+      }
+    }
+
+    @include responsive($desktop-medium) {
+      bottom: 38px;
+      &__line {
+        height: 30px;
+        bottom: -25px;
+      }
+    }
+
+    @keyframes scrolldown {
+      0% {
+        background-position: 0 $line-height-abs;
+      }
+      75% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: 0 $line-height;
+      }
+    }
+
+    &__link {
+      color: $white;
+      text-decoration: none;
+      font-size: 0.938em;
+      position: relative;
+      display: block;
+      line-height: 50px;
+      transition: color .2s ease-in-out;
+      &:hover,
+      &:focus {
+        color: rgba(255, 255, 255, 0.6);
+        text-decoration: none;
+      }
+      &:active {
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
+  }
+}
+
+.text-section {
+  &__container {
+    overflow: hidden;
+    display: table;
+  }
+
+  &__body {
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    padding: $padding;
+    vertical-align: middle;
+
+    @include responsive($desktop-lg){
+      padding: $padding 30px;
+    }
+  }
+
+  &__description {
+    @extend %table-cell;
+
+    h1 {
+      margin-bottom: 58px;
+      @include responsive($desktop) {
+        margin-bottom: 20px;
+      }
+    }
+
+    .description__text {
+      font-size: 1.125em;
+      font-weight: 300;
+
+      a{
+        border-bottom: 1px solid rgba(255,255,255,0.3);
+        text-decoration: none;
+      }
+
+    }
+
+    .description__read-more {
+      display: inline-block;
+      font-size: 1em;
+      text-decoration: none;
+      padding: 10px 0;
+      margin-top: 50px;
+
+      .svg-arrow{
+        display: inline-block;
+      }
+
+      span {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      }
+      @include responsive($desktop) {
+        margin-top: 20px;
+      }
+    }
+
+    .primary-btn {
+      margin-top: 38px;
+
+      @include responsive($tablet) {
+        width: 160px;
+        margin: 25px auto 0;
+        display: block;
+      }
+    }
+  }
+
+  @include responsive($tablet) {
+    &__body {
+      padding-top: 230px;
+      padding-bottom: 104px;
+    }
+
+    .description {
+      position: relative;
+
+      &__h1 {
+        font-size: 2.25em;
+        line-height: 1.94;
+        margin-bottom: 14px;
+        text-align: center;
+      }
+
+      &__text {
+        font-size: 0.875em;
+        line-height: 1.43;
+      }
+
+      &__read-more {
+        margin-top: 6px;
+        position: absolute;
+      }
+
+    }
+
+    &__img {
+      $mobile-img-size: 210px;
+      display: block;
+      width: auto;
+      height: auto;
+      position: absolute;
+      top: 40px;
+      margin-left: -($mobile-img-size / 2);
+      left: 50%;
+    }
+  }
+
+  &__img {
+    @extend %table-cell
+  }
+}
+
+.mobile .scroll-down {
+  bottom: 38px;
+  &__line {
+    height: 30px;
+    bottom: -25px;
+  }
+}
+
+

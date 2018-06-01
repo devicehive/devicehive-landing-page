@@ -1,0 +1,17 @@
+<header class="header" id="header">
+    <div class="container">
+        <div id="headerLogo" class="light-header__logo">
+            <a href="{{ .Site.BaseURL }}" class="light-header__logo__img">
+
+            </a>
+        </div>
+        <div class="header-nav" id="headerNav">
+            {{ partial "nav" . }}
+        </div>
+        <div id="mobileBtn" class="mobile-btn">
+            <div class="mobile-btn__icon">
+                <span></span>
+            </div>
+        </div>
+    </div>
+</header>

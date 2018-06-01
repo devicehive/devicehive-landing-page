@@ -1,0 +1,87 @@
+
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer__body">
+                <div class="footer__right">
+                    <div class="footer__sign-up">
+                        <div class="footer__hint footer__hint_desktop">
+                            Sign up to receive The DeviceHive News Digest
+                        </div>
+                        <div class="footer__hint footer__hint_mobile">
+                            Stay Tuned
+                        </div>
+                        <form id="footerEmailForm" class="footer-form validate"
+                              action="https://devicehive.us6.list-manage.com/subscribe/post-json?u=f61c753b4c1f02eb439b42f4f&amp;id=9c9f14f529&amp;c=?"
+                              method="GET" target="_blank">
+                            <input autocomplete="off" type="email" id="footer-email" class="required emailRegex email"
+                                   name="EMAIL" placeholder="Email Address">
+                            <span class="error" id="mailchimp-error"></span>
+                            <input class="footer__submit-btn secondary-btn" id="footerSubscribeBtn"
+                                   type="submit"
+                                   value="Subscribe"
+                                   name="subscribe">
+                        </form>
+                        <div class="contact-mail">
+                            Contact Us by Email: <a class="contact-mail__link" href="mailto:info@devicehive.com">info@devicehive.com</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer__left">
+                    <div class="footer__hint">
+                        Follow us on social media
+                    </div>
+                    <ul class="footer__links" id="footerLinks">
+                        <li>
+                            <a class="footer__link svg-icon svg-email"
+                               href="mailto:info@devicehive.com">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="footer__link svg-icon svg-google-plus track-link"
+                               href="https://plus.google.com/u/0/+Devicehiveframework/posts"
+                               target="_blank">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="footer__link svg-icon svg-linkedin track-link"
+                               href="https://www.linkedin.com/grp/home?gid=4863566"
+                               target="_blank">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="footer__link svg-icon svg-twitter track-link"
+                               href="https://twitter.com/DeviceHive" target="_blank">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="footer__link svg-icon svg-youtube track-link"
+                               href="https://www.youtube.com/user/DeviceHive" target="_blank">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="footer__link svg-icon svg-slack track-link"
+                               href="https://join.slack.com/t/devicehive/signup" target="_blank">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="footer__link svg-icon svg-google-groups track-link"
+                               href="https://groups.google.com/forum/#!forum/devicehive" target="_blank">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="footer__link svg-icon svg-medium track-link"
+                               href="https://medium.com/@DeviceHive" target="_blank">
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="footer__copyright">
+                        <div class="footer__copyright">
+                            {{ index (.Site.Params.CopyrightArr) 0 }} <br>
+                            {{ index (.Site.Params.CopyrightArr) 1 }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
