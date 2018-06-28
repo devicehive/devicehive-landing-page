@@ -25,5 +25,3 @@ googleAnalytics = "UA-36033368-1"
     weight = 10
     identifier = "Download"
     url = "/download/"
-
-
