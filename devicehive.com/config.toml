@@ -6,7 +6,7 @@ googleAnalytics = "UA-36033368-1"
 [params]
     description = "DeviceHive is a free, highly scalable open-source IoT platform for data collection, processing and analysis, visualization, and device management with the broad range of integration options."
     intercom = "ir6mnqpn"
-    copyrightArr = ["Developed by DataArt Solutions 2012-2017", "Distributed under Apache License 2.0"]
+    copyrightArr = ["Developed by DataArt Solutions 2012-2018", "Distributed under Apache License 2.0"]
 
 [[menu.main]]
     name = "Industries"
